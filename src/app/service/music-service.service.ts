@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class MusicService {
-  hostname: string = 'http://localhost:3000';
+  hostname: string = 'https://cst391-music-backend.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
