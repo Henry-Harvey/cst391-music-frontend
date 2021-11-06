@@ -6,7 +6,13 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build-serve": "node --max_old_space_size=8048 ./node_modules/@angular/cli/bin/ng serve",
+    "heroku-postbuild": "ng build --base-href"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
   },
   "private": true,
   "dependencies": {
@@ -27,7 +33,8 @@
     "rxjs": "~6.6.0",
     "tslib": "^2.3.0",
     "typescript": "^4.3.5",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "express": "^4.17.1"
   },
   "devDependencies": {
     "@types/jasmine": "~3.8.0",
