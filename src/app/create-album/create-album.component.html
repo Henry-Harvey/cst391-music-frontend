@@ -1,0 +1,60 @@
+<p>Create New Album</p>
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+  <div class="form-group" style="margin-left: 50px; margin-right: 50px">
+    <label for="title">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="title"
+      required
+      [(ngModel)]="title"
+      name="title"
+    />
+    <label for="artist">Artist</label>
+    <input
+      type="text"
+      class="form-control"
+      id="artist"
+      required
+      [(ngModel)]="artist"
+      name="artist"
+    />
+    <label for="description">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="description"
+      required
+      [(ngModel)]="description"
+      name="description"
+    />
+    <label for="year">Year</label>
+    <input
+      type="text"
+      class="form-control"
+      id="year"
+      required
+      [(ngModel)]="year"
+      name="year"
+    />
+    <label for="images">Image</label>
+    <select
+      class="form-control"
+      id="images"
+      required
+      [(ngModel)]="selectedImage"
+      name="images"
+      #selected="ngModel"
+    >
+      <option *ngFor="let image of images" [value]="image">
+        {{ image }}
+      </option>
+    </select>
+    <button type="submit" class="btn btn-success">Create</button>
+    <button type="button" class="btn btn-default" (click)="reset()">
+      Reset
+    </button>
+  </div>
+</form>
+
+<app-pop-over></app-pop-over>

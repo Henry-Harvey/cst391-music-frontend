@@ -1,0 +1,12 @@
+<p>Delete Album</p>
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+  <div class="form-group" style="margin-left: 50px; margin-right: 50px">
+    <label for="submit"
+      >Are you sure you want to delete the Album titled, "{{
+        album.Title
+      }}"?</label
+    >
+    <button type="submit" class="btn btn-success">Yes</button>
+    <button type="button" class="btn btn-default" (click)="cancel()">No</button>
+  </div>
+</form>

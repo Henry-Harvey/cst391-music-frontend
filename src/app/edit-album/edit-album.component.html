@@ -1,0 +1,58 @@
+<p>Edit Existing Album</p>
+<form (ngSubmit)="onSubmit()" #infoForm="ngForm">
+  <div class="form-group" style="margin-left: 50px; margin-right: 50px">
+    <label for="album.Title">Title</label>
+    <input
+      type="text"
+      class="form-control"
+      id="album.Title"
+      required
+      [(ngModel)]="album.Title"
+      name="album.Title"
+    />
+    <label for="album.Artist">Artist</label>
+    <input
+      type="text"
+      class="form-control"
+      id="album.Artist"
+      required
+      [(ngModel)]="album.Artist"
+      name="album.Artist"
+    />
+    <label for="album.Description">Description</label>
+    <input
+      type="text"
+      class="form-control"
+      id="album.Description"
+      required
+      [(ngModel)]="album.Description"
+      name="album.Description"
+    />
+    <label for="album.Year">Year</label>
+    <input
+      type="text"
+      class="form-control"
+      id="album.Year"
+      required
+      [(ngModel)]="album.Year"
+      name="album.Year"
+    />
+    <label for="images">Image</label>
+    <select
+      class="form-control"
+      id="images"
+      required
+      [(ngModel)]="album.Image"
+      name="images"
+      #selected="ngModel"
+    >
+      <option *ngFor="let image of images" [value]="image">
+        {{ image }}
+      </option>
+    </select>
+    <button type="submit" class="btn btn-success">Edit</button>
+    <button type="button" class="btn btn-default" (click)="reset()">
+      Reset
+    </button>
+  </div>
+</form>
