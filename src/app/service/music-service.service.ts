@@ -35,7 +35,7 @@ export class MusicService {
                 data[x]['tracks'][y]['number'],
                 data[x]['tracks'][y]['title'],
                 data[x]['tracks'][y]['lyrics'],
-                null
+                data[x]['tracks'][y]['video_url']
               )
             );
           albums.push(
@@ -45,7 +45,7 @@ export class MusicService {
               data[x]['artist'],
               data[x]['description'],
               data[x]['year'],
-              null,
+              data[x]['image_name'],
               tracks
             )
           );
@@ -64,7 +64,7 @@ export class MusicService {
             data['tracks'][y]['number'],
             data['tracks'][y]['title'],
             data['tracks'][y]['lyrics'],
-            data['tracks'][y]['video']
+            data['tracks'][y]['video_url']
           )
         );
       let album: Album = new Album(
@@ -73,7 +73,7 @@ export class MusicService {
         data['artist'],
         data['description'],
         data['year'],
-        data['image'],
+        data['image_name'],
         tracks
       );
       callback(album);

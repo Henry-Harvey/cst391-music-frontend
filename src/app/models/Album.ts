@@ -1,86 +1,78 @@
-import { Track } from "./Track";
+import { Track } from './Track';
 
-export class Album
-{
-    private id: number = -1;
-    private title: string = "";
-    private artist: string = "";
-    private description: string = "";
-    private year: number = 1900;
-    private image: string = "";
-    private tracks: Track[] = [];
-    
-    constructor(id:number, title:string, artist:string, description:string, year:number, image: string, tracks:Track[])
-    {
-        this.id = id;
-        this.title = title;
-        this.artist = artist;
-        this.description = description;
-        this.year = year;
-        this.image = image;
-        this.tracks = tracks;
-    }
+export class Album {
+  private id: number = -1;
+  private title: string = '';
+  private artist: string = '';
+  private description: string = '';
+  private year: number = 1900;
+  private image_name: string = '';
+  private tracks: Track[] = [];
 
-    get Id():number
-    {
-        return this.id;
-    }
-    set Id(id:number)
-    {
-        this.id = id;
-    }
+  constructor(
+    id: number,
+    title: string,
+    artist: string,
+    description: string,
+    year: number,
+    image_name: string,
+    tracks: Track[]
+  ) {
+    this.id = id;
+    this.title = title;
+    this.artist = artist;
+    this.description = description;
+    this.year = year;
+    this.image_name = image_name;
+    this.tracks = tracks;
+  }
 
-    get Title():string
-    {
-        return this.title;
-    }
-    set Title(title:string)
-    {
-        this.title = title;
-    }
+  get Id(): number {
+    return this.id;
+  }
+  set Id(id: number) {
+    this.id = id;
+  }
 
-    get Artist():string
-    {
-        return this.artist;
-    }
-    set Artist(artist:string)
-    {
-        this.artist = artist;
-    }
+  get Title(): string {
+    return this.title;
+  }
+  set Title(title: string) {
+    this.title = title;
+  }
 
-    get Description():string
-    {
-        return this.description;
-    }
-    set Description(description:string)
-    {
-        this.description = description;
-    }
-    
-    get Year():number
-    {
-        return this.year;
-    }
-    set Year(year:number)
-    {
-        this.year = year;
-    }
+  get Artist(): string {
+    return this.artist;
+  }
+  set Artist(artist: string) {
+    this.artist = artist;
+  }
 
-    public get Image(): string 
-    {
-        return this.image;
-    }
-    public set Image(value: string) 
-    {
-        this.image = value;
-    }
+  get Description(): string {
+    return this.description;
+  }
+  set Description(description: string) {
+    this.description = description;
+  }
 
-    get Tracks():Track[]
-    {
-        return this.tracks;
-    }
-    set Tracks(tracks:Track[])
-    {
-        this.tracks = tracks;
-    }
+  get Year(): number {
+    return this.year;
+  }
+  set Year(year: number) {
+    this.year = year;
+  }
+
+  public get Image_name(): string {
+    return this.image_name;
+  }
+  public set Image_name(value: string) {
+    this.image_name = value;
+  }
+
+  get Tracks(): Track[] {
+    return this.tracks;
+  }
+  set Tracks(tracks: Track[]) {
+    this.tracks = tracks;
+  }
 }

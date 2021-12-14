@@ -18,7 +18,7 @@ export class ListAlbumsComponent implements OnInit {
   ngOnInit() {
     this.service.getAlbums(this.artist.Name, (albums: Album[]) => {
       this.albums = albums;
-      console.log(albums, '!!!!!!!!!!');
+      console.log(albums);
     });
   }
 
